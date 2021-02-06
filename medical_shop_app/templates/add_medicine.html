@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% load static %} 
+
+
+{% block content %}
+
+
+<form method="post">
+    {% csrf_token %}
+  
+    <label for="name">Your medicine name: </label>
+    <input class="form-control" id="name" type="text" name="name">
+    <label for="price">Your price: </label>
+    <input class="form-control" id="price" type="text" name="price">
+    <label for="stock">Your initial stock: </label>
+    <input class="form-control" id="stock" type="text" name="stock" value=0>
+    <input class="btn btn-primary" type="submit" value="OK">
+</form>
+
+
+{% endblock content %}

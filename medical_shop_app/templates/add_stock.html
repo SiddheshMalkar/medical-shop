@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% load static %} 
+
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+
+    
+  
+    <label for="mid">Your medicine: </label>
+    <select class="form-control" id="mid" name="mid">
+        {% for medicine in medicines %}
+            <li><option value="{{medicine.mid}}">{{medicine.name}}</option></li>
+        {% endfor %}
+    </select>
+    <label for="stock">Your stock: </label>
+    <input class="form-control" id="stock" type="text" name="stock">
+    <input class="btn btn-primary" type="submit" value="OK">
+</form>
+
+
+
+{% endblock content %}
