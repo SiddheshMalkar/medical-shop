@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '7+ah)yvfj+@^61ss$dkd4p&colyae=g3)tdi+fut58n+&ql@ci'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['morning-chamber-24705.herokuapp.com','127.0.0.1']
 
 
 # Application definition
